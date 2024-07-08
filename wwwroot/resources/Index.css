@@ -36,8 +36,8 @@ section {
 
 
 
-
 tbody{
+    display:block;
     border: 1px solid;
 }
 
@@ -53,8 +53,8 @@ td {
     background-color: red;
 }
 
-.validationMSG{
-    display:block;
-    text-align:center;
+.validationMSG {
+    display: block;
+    text-align: center;
 }
 
