@@ -1,0 +1,75 @@
+﻿@model List<TPLOCAL1.Models.Opinion>
+@{
+    
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="~/resources/Index.css" />
+        <title>Opinion List</title>
+    </head>
+
+    <body>
+        <header>
+            <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+            <h1>Opinion List</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a asp-route-id=""  asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-route-id="Form"  asp-controller="Home" asp-action="Index">Fill in the form</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <table>
+                <thead>
+                    <th colspan="3">
+                        List
+                    </th>
+
+                </thead>
+           
+                <tbody>
+                    <tr>
+                        <td>
+                            Last Name
+                        </td>
+                        <td>
+                            First Name
+                        </td>
+                        <td>
+                            Notice given
+                        </td>
+                    </tr>
+                    @foreach (TPLOCAL1.Models.Opinion item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(itemModel => item.LastName)
+                            </td>   
+                            <td>
+                                @Html.DisplayFor(itemModel => item.FirstName)
+                            </td>
+                            @if (item.OpinionGiven[0] == 'O')
+                            {
+                                <td class="Oui">
+                                    Yes
+                                </td>
+                            }
+                            else
+                            {
+                                <td class="Non">
+                                    No
+                                </td>
+                            }
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </section>
+
+    </body>
+</html>

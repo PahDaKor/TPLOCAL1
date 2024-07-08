@@ -1,0 +1,127 @@
+﻿@model TPLOCAL1.Models.FormModel
+@{
+}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="~/resources/Index.css" />
+        <title>Formulaire</title>
+    </head>
+    <body>
+        <header>
+            <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+            <h1>Formulaire TP HN avis</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a asp-route-id="" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-route-id="OpinionList"  asp-controller="Home" asp-action="Index">Opinion List </a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <form method="post" asp-action="ValidationFormulaire" asp-controller="Home">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">
+                            Personal information
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td><input type="text" asp-for="FirstName" required/> </td>
+                        </tr>
+                        <tr>
+                            <td>Forename</td>
+                            <td><input type="text" asp-for='LastName' required /> </td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>
+                                <select asp-for="Gender" required>
+                                    <option value="" disabled selected>Select a gender</option>
+                                    <option value="Man">Man</option>
+                                    <option value="Woman">Woman</option>
+                                    <option value="Other">Other</option>
+
+                                </select> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td><input type="text" asp-for="Address" required /> </td>
+                        </tr>
+                        <tr>
+                            <td>Zipcode</td>
+                            <td>
+                                <input type="text" pattern="[0-9][0-9][0-9][0-9][0-9]" asp-for="Zipcode" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Town</td>
+                            <td><input type="text" asp-for="Town" required /> </td>
+                        </tr>
+                        <tr>
+                            <td>Email Address</td>
+                            <td><input type="email" asp-for="Email" required /> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">
+                                Training information
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Start date training</td>
+                            <td><input type="date" max="2020-12-31" asp-for="Date" required /> </td>
+                        </tr>
+                        <tr>
+                            <td>Type of training</td>
+                            <td>
+                                <select id="Typeoftraining" asp-for="Typeoftraining" required>
+                                    <option value="" disabled selected>Select a course</option>
+                                    <option value="Cobol Training">Cobol Training</option>
+                                    <option value="Object Training">Object Training</option>
+                                    <option value="Dual Skills Training">Dual Skills Training</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">
+                                Training Reviews
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cobol Training</td>
+                            <td><input type="text" asp-for="CobolTraining" required /> </td>
+                        </tr>
+                        <tr>
+                            <td>Training Purpose</td>
+                            <td><input type="text" asp-for='TrainingPurpose' required /> </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="submit"/>
+            </form>
+
+        </section>
+
+    </body>
+</html>

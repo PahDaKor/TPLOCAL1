@@ -1,3 +1,28 @@
-﻿<header>
-    <h1>Welcome to the HN .Net MVC pratical work</h1>
-</header>
+﻿<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="~/resources/Index.css" />
+        <title>HN - TP LOCAL</title>
+    </head>
+
+    <body>
+        <header>
+            <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+            <h1>Welcome to TP HN</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a asp-route-id="Form" asp-controller="Home" asp-action="Index">Fill the form</a></li>
+                <li><a asp-route-id="OpinionList" asp-controller="Home" asp-action="Index">Opinion list</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <p>
+            <a asp-route-id="Form" asp-controller="Home" asp-action="Index">Fill the form </a>
+            </p>
+        </section>
+    </body>
+</html>

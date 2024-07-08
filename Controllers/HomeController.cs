@@ -23,7 +23,9 @@ namespace TPLOCAL1.Controllers
                 {
                     case "OpinionList":
                         //TODO : code reading of the xml files provide
-                        return View(id);
+                        OpinionList opinionList = new OpinionList();
+                        List<Opinion> model = opinionList.GetAvis("XlmFile/DataAvis.xml");
+                        return View(id,model);
                     case "Form":
                         //TODO : call the Form view with data model empty
                         return View(id);
@@ -37,12 +39,13 @@ namespace TPLOCAL1.Controllers
 
         //methode to send datas from form to validation page
         [HttpPost]
-        public ActionResult ValidationFormulaire(/*model*/)
+        public ActionResult ValidationFormulaire(FormModel model)
         {
             //TODO : test if model's fields are set
             //if not, display an error message and stay on the form page
             //else, call ValidationForm with the datas set by the user
-            return null;
+
+            return View(model);
 
         }
     }

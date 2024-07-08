@@ -1,0 +1,60 @@
+﻿.image {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+h1 {
+    margin-right: 170px;
+    margin-left: 170px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav {
+    width: 150px;
+    border: 2px solid #8c014c;
+    background-color: #8c014c;
+    color: white;
+    float:left;
+}
+
+li {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+a {
+    color: chocolate;
+}
+
+section {
+    margin-left: 170px;
+}
+
+
+
+
+tbody{
+    border: 1px solid;
+}
+
+td {
+    border: 1px solid;
+}
+
+.Oui{
+    background-color:green;
+}
+
+.Non {
+    background-color: red;
+}
+
+.validationMSG{
+    display:block;
+    text-align:center;
+}
+

@@ -1,0 +1,111 @@
+﻿
+@model TPLOCAL1.Models.FormModel
+
+@{
+}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="~/resources/Index.css" />
+    <title>Validation Page</title>
+    </head>
+    <body>
+        <header>
+            <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+            <h1>Validation Page</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a asp-route-id="OpinionList"  asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-route-id="OpinionList"  asp-controller="Home" asp-action="Index">Opinion list</a></li>
+            </ul>
+        </nav>
+
+
+        <section>
+            <p class="validationMSG">Your form has been taken into account</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">
+                                Personal information
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td>@Html.DisplayFor(model => model.FirstName)</td>
+                        </tr>
+                        <tr>
+                            <td>Forename</td>
+                            <td>@Html.DisplayFor(model => model.LastName)</td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>@Html.DisplayFor(model => model.Gender)</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>@Html.DisplayFor(model => model.Address)</td>
+                        </tr>
+                        <tr>
+                            <td>Zipcode</td>
+                            <td>@Html.DisplayFor(model => model.Zipcode) </td>
+                        </tr>
+                        <tr>
+                            <td>Town</td>
+                            <td>@Html.DisplayFor(model => model.Town) </td>
+                        </tr>
+                        <tr>
+                            <td>Email Address</td>
+                            <td>@Html.DisplayFor(model => model.Email)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">
+                                Training information
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Start date training</td>
+                            <td>@Html.DisplayFor(model => model.Date, "{0:dd/MM/yyyy}")</td>
+                        </tr>
+                        <tr>
+                            <td>Type of training</td>
+                            <td>
+                                @Html.DisplayFor(model => model.Typeoftraining)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">
+                                Training Reviews
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cobol Training</td>
+                            <td>@Html.DisplayFor(model => model.CobolTraining) </td>
+                        </tr>
+                        <tr>
+                            <td>Training Purpose</td>
+                            <td>@Html.DisplayFor(model => model.TrainingPurpose) </td>
+                        </tr>
+                    </tbody>
+                </table>
+        </section>
+    </body>
+</html>
