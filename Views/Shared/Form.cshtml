@@ -32,41 +32,47 @@
                     <tbody>
                         <tr>
                             <td>Name</td>
-                            <td><input type="text" asp-for="FirstName" required/> </td>
+                        <td><input type="text" asp-for="FirstName" /> <br>  <span asp-validation-for="FirstName" class="text-danger"></span></td>
                         </tr>
                         <tr>
                             <td>Forename</td>
-                            <td><input type="text" asp-for='LastName' required /> </td>
+                        <td><input type="text" asp-for='LastName' /> <br>   <span asp-validation-for="LastName" class="text-danger"></span></td>
                         </tr>
                         <tr>
                             <td>Gender</td>
                             <td>
-                                <select asp-for="Gender" required>
+                                <select asp-for="Gender">
                                     <option value="" disabled selected>Select a gender</option>
                                     <option value="Man">Man</option>
                                     <option value="Woman">Woman</option>
                                     <option value="Other">Other</option>
 
-                                </select> 
+                                </select>
+                            <br> <span asp-validation-for="Gender" class="text-danger"></span>
                             </td>
                         </tr>
                         <tr>
                             <td>Address</td>
-                            <td><input type="text" asp-for="Address" required /> </td>
+                        <td><input type="text" asp-for="Address" /><br>  <span asp-validation-for="Address" class="text-danger"></span> </td>
                         </tr>
                         <tr>
                             <td>Zipcode</td>
                             <td>
-                                <input type="text" pattern="[0-9][0-9][0-9][0-9][0-9]" asp-for="Zipcode" required />
+                            <input type="text" asp-for="Zipcode" /><br>
+                            <span asp-validation-for="Zipcode" class="text-danger"></span>
                             </td>
                         </tr>
                         <tr>
                             <td>Town</td>
-                            <td><input type="text" asp-for="Town" required /> </td>
+                        <td>
+                            <input type="text" asp-for="Town" /><br>
+                            <span asp-validation-for="Town" class="text-danger"></span>
+                        </td>
                         </tr>
                         <tr>
-                            <td>Email Address</td>
-                            <td><input type="email" asp-for="Email" required /> </td>
+                        <td>Email Address</td>
+                        <br>
+                        <td><input type="email" asp-for="Email" /> <br>  <span asp-validation-for="Email" class="text-danger"></span> </td>
                         </tr>
                     </tbody>
                 </table>
@@ -82,18 +88,19 @@
                     <tbody>
                         <tr>
                             <td>Start date training</td>
-                            <td><input type="date" max="2020-12-31" asp-for="Date" required /> </td>
+                        <td><input type="date" max="2020-12-31" asp-for="Date" /> <br>   <span asp-validation-for="Date" class="text-danger"></span></td>
                         </tr>
                         <tr>
                             <td>Type of training</td>
                             <td>
-                                <select id="Typeoftraining" asp-for="Typeoftraining" required>
+                                <select id="Typeoftraining" asp-for="Typeoftraining">
                                     <option value="" disabled selected>Select a course</option>
                                     <option value="Cobol Training">Cobol Training</option>
                                     <option value="Object Training">Object Training</option>
                                     <option value="Dual Skills Training">Dual Skills Training</option>
 
-                                </select>
+                            </select><br>
+                            <span asp-validation-for="Typeoftraining" class="text-danger"></span>
                             </td>
                         </tr>
                     </tbody>
@@ -109,12 +116,12 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Cobol Training</td>
-                            <td><input type="text" asp-for="CobolTraining" required /> </td>
+                        <td>Cobol Training</td>
+                        <td><input type="text" asp-for="CobolTraining" /> </td>
                         </tr>
                         <tr>
-                            <td>Training Purpose</td>
-                            <td><input type="text" asp-for='TrainingPurpose' required /> </td>
+                        <td>Training Purpose</td>
+                        <td><input type="text" asp-for='TrainingPurpose'/> </td>
                         </tr>
                     </tbody>
                 </table>

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using TPLOCAL1.Models;
 
 //Subject is find at the root of the project and the logo in the wwwroot/ressources folders of the solution
@@ -36,14 +36,23 @@ namespace TPLOCAL1.Controllers
             }
         }
 
+        [HttpPost]
+        public ActionResult Index(FormModel model)
+        {
+            return View(model);
+        }
 
         //methode to send datas from form to validation page
-        [HttpPost]
         public ActionResult ValidationFormulaire(FormModel model)
         {
             //TODO : test if model's fields are set
             //if not, display an error message and stay on the form page
             //else, call ValidationForm with the datas set by the user
+            if (!ModelState.IsValid)
+            {
+
+                return View("Form", model);
+            }
 
             return View(model);
 
